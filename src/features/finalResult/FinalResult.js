@@ -8,13 +8,13 @@ function FinalResult() {
       <div className='finalResultItem'>
         <span className='title'>Сумма договора лизинга</span>
         <div className='value'>
-          000<span>&nbsp;₽</span>
+          3&nbsp;000&nbsp;000<span>&nbsp;₽</span>
         </div>
       </div>
       <div className='finalResultItem'>
         <span className='title'>Ежемесячный платеж от</span>
         <div className='value'>
-          000<span>&nbsp;₽</span>
+          15&nbsp;000<span>&nbsp;₽</span>
         </div>
       </div>
       <div className="finalResultBtn">

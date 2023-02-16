@@ -2,11 +2,12 @@
    display: flex;
    justify-content: space-between;
    margin-bottom: 213px;
-   padding-left: 10px;
  }
+
  .finalResultItem {
    width: 33.3%;
  }
+
  .finalResultItem .title {
    color: #575757;
    font-family: 'Gilroy';
@@ -101,6 +102,7 @@
    
    .finalResultBtn {
      padding-left: 0;
+     margin-top: 12px;
    }
  
    .finalResultBtn button {
