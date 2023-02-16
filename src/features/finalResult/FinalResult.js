@@ -1,23 +1,23 @@
 import React from 'react';
-import style from './FinalResult.scss';
+import './FinalResult.scss';
 
 function FinalResult() {
   
   return (
-    <div className={style.finalResult}>
-      <div className={style.finalResultItem}>
-        <span className={style.title}>Сумма договора лизинга</span>
-        <div className={style.value}>
+    <div className='finalResult'>
+      <div className='finalResultItem'>
+        <span className='title'>Сумма договора лизинга</span>
+        <div className='value'>
           000<span>&nbsp;₽</span>
         </div>
       </div>
-      <div className={style.finalResultItem}>
-        <span className={style.title}>Ежемесячный платеж от</span>
-        <div className={style.value}>
+      <div className='finalResultItem'>
+        <span className='title'>Ежемесячный платеж от</span>
+        <div className='value'>
           000<span>&nbsp;₽</span>
         </div>
       </div>
-      <div className={style.finalResultBtn}>
+      <div className="finalResultBtn">
         <button>Оставить заявку</button>
       </div>
     </div>

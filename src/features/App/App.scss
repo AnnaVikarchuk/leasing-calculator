@@ -1,5 +1,49 @@
+.App {
+  margin-left: 47px;
+  margin-right: 48px;
+}
 
+h1 {
+  width: 753px;
+  height: 98px;
+  margin-top: 213px;
+  margin-right: 640px;
+  margin-bottom: 32px;
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+  color: #111111;
+}
 
+@media (min-width: 768px) and (max-width: 1119px) {
+  .App {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+
+  h1 {
+    margin-top: 64px;
+    width: 753px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .App {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  h1 {
+    margin-top: 44px;
+    margin-bottom: 32px;
+    width: 279px;
+    height: 124px;
+    font-size: 34px;
+  }
+}
 
 
 
