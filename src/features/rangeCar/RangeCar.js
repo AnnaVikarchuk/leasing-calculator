@@ -2,8 +2,8 @@ import React from 'react';
 import './RangeCar.scss';
 import { useState } from 'react';
 
-export default function RangeCar() {
-  const [carPrice, setCarPrice] = useState(1500000);
+export default function RangeCar({carPrice, setCarPrice, deposit, setPercant}) {
+  
 
   const handleChangePrice = (event) => {
     if (event.target.value === '') {
@@ -11,9 +11,9 @@ export default function RangeCar() {
     } else {
       let numbers = event.target.value;
       let res = numbers.replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
-      console.log(typeof res, res)
-      setCarPrice(String(res.replace(/\s/g, '')));
-      console.log(carPrice);
+      setCarPrice(res.replace(/\s/g, ''));
+
+      setPercant((deposit * 100)/ +event.target.value)
     }
   };
 
