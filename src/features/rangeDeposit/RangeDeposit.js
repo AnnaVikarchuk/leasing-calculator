@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import './RangeDeposit.scss';
 
 export default function RangeDeposit({ carPrice, deposit, setDeposit, percant, setPercant }) {
@@ -8,8 +7,8 @@ export default function RangeDeposit({ carPrice, deposit, setDeposit, percant, s
       setDeposit(0);
       setPercant(0);
     } else {
-      setDeposit(+event.target.value);
-      setPercant((+event.target.value * 100) / carPrice);
+      setDeposit((+event.target.value).toFixed(0));
+      setPercant(((+event.target.value * 100) / carPrice).toFixed(0));
     }
   };
   const handleChangePercant = (event) => {
@@ -17,8 +16,8 @@ export default function RangeDeposit({ carPrice, deposit, setDeposit, percant, s
       setDeposit(0);
       setPercant(0);
     } else {
-      setDeposit((+event.target.value * +carPrice) / 100);
-      setPercant(+event.target.value);
+      setDeposit(((+event.target.value * +carPrice) / 100).toFixed(0));
+      setPercant((+event.target.value).toFixed(0));
     }
   };
 

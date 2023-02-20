@@ -1,10 +1,8 @@
 import React from 'react';
 import './RangeCar.scss';
-import { useState } from 'react';
 
 export default function RangeCar({carPrice, setCarPrice, deposit, setPercant}) {
   
-
   const handleChangePrice = (event) => {
     if (event.target.value === '') {
       setCarPrice(0);
@@ -13,7 +11,7 @@ export default function RangeCar({carPrice, setCarPrice, deposit, setPercant}) {
       let res = numbers.replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
       setCarPrice(res.replace(/\s/g, ''));
 
-      setPercant((deposit * 100)/ +event.target.value)
+      setPercant(((deposit * 100)/ +event.target.value).toFixed(0))
     }
   };
 

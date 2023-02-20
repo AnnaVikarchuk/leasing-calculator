@@ -1,9 +1,7 @@
 import React from 'react';
 import './RangeLeasing.scss';
-import { useState } from 'react';
 
 export default function RangeLeasing({leasing, setLeasing}) {
-  
   
   const handleChangeLeasing = (event) => {
     if (event.target.value === '') {

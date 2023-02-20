@@ -10,9 +10,6 @@ function App() {
   const [leasing, setLeasing] = useState(6);
 
   const monthPayment = ((Number(carPrice) - Number(deposit)) * (0.05 * Math.pow((1 + 0.05), leasing) / (Math.pow((1 + 0.05), leasing) - 1))).toFixed(0);
-  console.log(String(carPrice).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' '))
-  console.log(deposit)
-  console.log(leasing)
 
   const sumContract = (Number(deposit) + Number(leasing) * monthPayment).toFixed(0);
 
@@ -20,6 +17,7 @@ function App() {
   // “Сумма договора лизинга” = Первоначальный взнос + Срок кредита в месяцах * Ежемесячный платеж от
   // “Ежемесячный платеж от” =
   // (Стоимость автомобиля - Первоначальный взнос) * (0.05 * Math.pow((1 + 0.05), Срок кредита в месяцах) / (Math.pow((1 + 0.05), Срок кредита в месяцах) - 1)
+  
   return (
     <div className="App">
       <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
