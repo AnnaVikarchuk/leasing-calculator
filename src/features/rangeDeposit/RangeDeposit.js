@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './RangeDeposit.scss';
+import stateContext from '../../context';
 
-export default function RangeDeposit({ carPrice, deposit, setDeposit, percant, setPercant }) {
+export default function RangeDeposit() {
+
+  const { carPrice, deposit, setDeposit, percant, setPercant } = useContext(stateContext);
+  
   const handleChangeDeposit = (event) => {
     if (event.target.value === '') {
       setDeposit(0);

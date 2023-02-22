@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './RangeCar.scss';
+import stateContext from '../../context';
 
-export default function RangeCar({carPrice, setCarPrice, deposit, setPercant}) {
+export default function RangeCar() {
   
+  const {carPrice, setCarPrice, deposit, setPercant} = useContext(stateContext);
+
   const handleChangePrice = (event) => {
     if (event.target.value === '') {
       setCarPrice(0);
     } else {
-      let numbers = event.target.value;
-      let res = numbers.replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
-      setCarPrice(res.replace(/\s/g, ''));
-
+      setCarPrice(event.target.value);
+      console.log(carPrice)
       setPercant(((deposit * 100)/ +event.target.value).toFixed(0))
     }
   };
